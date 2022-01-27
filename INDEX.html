@@ -1,23 +1,78 @@
 <!doctype html>
 <html>
   <head>
-    <title>ON&GYEOL</title>
+    <title>ON_GYEOL</title>
     <meta charset="utf-8">
+    <style>
+      #maintop{
+        background-color: #A9B6CC;
+      }
+      #logo_image{
+        /*이미지크기제한(비율유지)*/
+        width: auto; height: auto;
+        max-width:400px;
+        max-height:400px;
+        /*이미지센터배치*/
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      #mainwords_image{
+        padding-bottom: 20px;
+        padding-left:100px;
+      }
+      .center {
+        /*이미지센터배치*/
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      #keyword_box{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      /* two images side by side */
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+    </style>
   </head>
 
   <body>
-    <h1><a href="INDEX.html">ON_GYEOL</a></h1>
-    <p style="margin-top:50px;">I hope Seon & Hangyeol get <strong>happier</strong>, whenever they open this page.</p>
-    <img src="test.jpg" width="200px">
+    <div id=maintop>
+      <p id="logo_image"><a href="INDEX.html"><img src="logo.gif" width="450px"></a></p>
+      <p id="mainwords_image"><img src="mainwords.png" width="1000px" class="center"></p>
+    </div>
+  
+    <label id=keyword_box>
+      <input type="text" name="Keyword" value="추억 KEYWORD를 적어보렴 :]" width="300px">
+    </label>
+
+    <div class="row">
+      <div class="column">
+        <a href="SEON.html"><img src="seon_face.gif" width="200px"></a>
+      </div>
+      <div class="column">
+        <a href="HANGYEOL.html"><img src="hangyeol_face.gif" width="200px"></a>
+      </div>
+    </div>
+
     <ul>
       <li><a href="FAMILY.html">FAMILY RECORD</a></li>
-      <li><a href="SEON.html">SEON RECORD</a></li>
-      <li><a href="HANGYEOL.html">HANGYEOL RECORD</a></li>
-      <li>KEYWORD</li>
+      <li><a href="https://www.instagram.com/seonie_home/" target="_blank" title="GO TO INSTAGRAM">FAMILY INSTAGRAM</a></li>
     </ul>
-    <p><a href="https://www.instagram.com/seonie_home/" target="_blank" title="GO TO INSTAGRAM">FAMILY INSTAGRAM</a>
-    </p>
-    <p><iframe width="560" height="315" src="https://www.youtube.com/embed/nxEkRwNrACg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </p>
+
+    <label>
+      <audio src="homepage_bgm.mp3" autoplay loop></audio>
+    </label>
   </body>
 </html>
