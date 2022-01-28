@@ -5,23 +5,31 @@
     <meta charset="utf-8">
     <script src="https://kit.fontawesome.com/e6afc31115.js" crossorigin="anonymous"></script>
     <style>
+       *{
+            box-sizing:border-box;
+        }
       #maintop{
         background-color: #A9B6CC;
       }
       #logo_image{
-        /*이미지크기제한(비율유지)*/
+        /* 이미지크기제한(비율유지)*/
         width: auto; height: auto;
         max-width:400px;
         max-height:400px;
+        
         /*이미지센터배치*/
         display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-top:0;
+        margin-bottom: 0;
         width: 50%;
       }
       #mainwords_image{
         padding-bottom: 20px;
         padding-left:100px;
+        margin-top:10px;
+        margin-bottom: 0;
       }
       .center {
         /*이미지센터배치*/
@@ -33,50 +41,59 @@
       #keyword_box{
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
       }
-      /* two images side by side */
-      .column {
-        float: left;
-        width: 33.33%;
-        padding: 5px;
+      #instagram_logo{
+        /* 하단 중간에 고정시키는 법 */
+        position: absolute; 
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 100px;
+        bottom: 20px;
       }
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
+
       #attribution{
         font-size: xx-small;
+        padding-right: 0px;
+        position: fixed;
+          right:0;
+          bottom:0;
       }
+      /* flex display */
+      .container{
+            display:flex;
+            flex-direction:row;
+        }
+        .item:nth-child(2){
+          /* family 사진에 따라서 2번 아이템만 px 조정필요 */
+            flex-basis: 800px; 
+        }
     </style>
   </head>
 
   <body>
-    <div id=maintop>
+    <div id="maintop">
       <p id="logo_image"><a href="INDEX.html"><img src="logo.gif" width="450px"></a></p>
       <p id="mainwords_image"><img src="mainwords.png" width="1000px" class="center"></p>
     </div>
   
-    <a href="https://www.instagram.com/seonie_home/" target="_blank" title="GO TO INSTAGRAM"><i class="fab fa-instagram fa-2x"></i></a></i>
-    <br>
-    <label id=keyword_box>
-      <input type="text" name="Keyword" value="추억 KEYWORD를 적어보렴 :]" width="300px">
+    <label id="keyword_box">
+      <input type="" name="Keyword" value="추억 KEYWORD를 적어보렴 :]" width="500px">
     </label>
 
-    <div class="row">
-      <div class="column">
-        <a href="SEON.html"><img src="seon_face.gif" width="300px"></a>
-      </div>
-      <div class="column">
-        <a href="FAMILY.html"><img src="family_temp.png" width="300px"></a>
-      </div>
-      <div class="column">
-        <a href="HANGYEOL.html"><img src="hangyeol_face.gif" width="300px"></a>
-      </div>
+    <div class="container">
+      <div class="item"><a href="SEON.html"><img src="seon_face.gif" width="300px" class="center"></a></div>
+      <div class="item"><a href="FAMILY.html"><img src="family_temp.png" width="300px" class="center"></a></div>
+      <div class="item"><a href="HANGYEOL.html"><img src="hangyeol_face.gif" width="300px" class="center"></a></div>
+    </div>
+
+    <div id=instagram_logo>
+      <a href="https://www.instagram.com/seonie_home/" target="_blank" title="GO TO INSTAGRAM" ><i class="fab fa-instagram fa-2x"></i></a></i>
     </div>
 
     <label>
       <audio src="homepage_bgm.mp3" autoplay loop></audio>
-      <div id=attribution>
+      <div id="attribution">
       Music:https://www.bensound.com 
       </div>
     </label>

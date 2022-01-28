@@ -3,7 +3,6 @@
   <head>
     <title>HANGYEOL</title>
     <meta charset="utf-8">
-    <script src="https://kit.fontawesome.com/e6afc31115.js" crossorigin="anonymous"></script>
     <style>
       #maintop{
         background-color: #A9B6CC;
@@ -33,37 +32,51 @@
       }
       #keyword_box {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        position: absolute;
+        right: 10px;
       }
 
-      #attribution {
+      #nextpage{
+        /* flex display */
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 350px;
+        left: 0;
+        right: 0;
+      }
+
+      #attribution{
         font-size: xx-small;
+        padding-right: 0px;
+        position: fixed;
+          right:0;
+          bottom:0;
       }
     </style>
   </head>
 
   <body>
-    <div id=maintop>
+    <div id="maintop">
       <p id="logo_image"><a href="INDEX.html"><img src="logo.gif" width="450px"></a></p>
       <p id="mainwords_image"><img src="mainwords.png" width="1000px" class="center"></p>
     </div>
 
-    <a href="https://www.instagram.com/seonie_home/" target="_blank" title="GO TO INSTAGRAM"><i class="fab fa-instagram fa-2x"></i></a></i>
-    <br>
-    <label id=keyword_box>
+    <label id="keyword_box">
       <input type="text" name="Keyword" value="추억 KEYWORD를 적어보렴 :]">
     </label>
     <div>
     <img src="hangyeol_face.gif" width="200px" class="center">
     </div>
 
-    <ul>
-      <li><a href="">FAMILY RECORD</a></li>
-      <li><a href="">SEON RECORD</a></li>
-    </ul>
+    <div id="nextpage">
+      <div class="item"><a href="FAMILY.html"><img src="family_temp.png" width="100px" ></a></div>
+      <div class="item"><a href="SEON.html"><img src="seon_face.gif" width="100px"></a></div>
+    </div>
 
     <label>
       <audio src="hangyeol_bgm.mp3" autoplay loop></audio>
-      <div id=attribution>
+      <div id="attribution">
       Music:https://www.bensound.com
       </div>
     </label>
